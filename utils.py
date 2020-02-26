@@ -64,6 +64,6 @@ def csv2png_test(csv_path, img_dir_name):
         img_filename = str(each) + '.png'
         face = [int(pixel) for pixel in img_list[each].split(' ')]
         face = np.asarray(face).reshape(IMG_SIZE_X, IMG_SIZE_Y)
-        cv2.imwrite(DIR_PREFIX + img_dir_name + img_filename, face)
+        cv2.imwrite(DIR_PREFIX + img_dir_name + '/' + img_filename, face)
         logging.info(f'已转换图片文件{img_filename} 保存于{DIR_PREFIX+img_dir_name+"/"}')
 
