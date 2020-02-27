@@ -102,7 +102,7 @@ if mode == "train" or True:
             steps_per_epoch=num_train // batch_size,
             epochs=num_epoch)
 
-    print(model_info.history)
+    # print(model_info.history)
     plot_model_history(model_info)
     model.save_weights('model.h5')
 
