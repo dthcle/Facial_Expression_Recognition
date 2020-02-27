@@ -1,4 +1,4 @@
-import tensorflow as tf
+from fun import *
 
 
 #  0 anger 生气
@@ -9,4 +9,6 @@ import tensorflow as tf
 #  5 surprised 惊讶
 #  6 normal 中性
 
-print(tf.test.gpu_device_name())
+if __name__ == '__main__':
+    model = load_model()
+    test_the_model(model, 'data/icml_public_test')
